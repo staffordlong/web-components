@@ -13,31 +13,18 @@ class CookieAlert extends HTMLElement {
   initStyle() {
     var style = this.shadowRoot.querySelector('style');
     var positionCSS = {};
-    switch (this.getAttribute('position') || 'fixed-top') {
-      case 'fixed-top':
-        positionCSS = {
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0
-        };
-        break;
-
-      case 'fixed-bottom':
-        positionCSS = {
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0
-        };
-        break;
-
-      case 'fixed-coords':
+    switch (this.getAttribute('position')) {
+      case 'fixed':
         positionCSS = Object.assign({ position: 'fixed' }, this.coords);
+        break;
+
+      case 'absolute':
+        positionCSS = Object.assign({ position: 'absolute' }, this.coords);
+        break;
     }
-    style.innerText = `div { ${Object.keys(positionCSS).map((key, index) => {
+    style.innerText = `p { margin: 0; } div { ${Object.keys(positionCSS).map((key, index) => {
       return `${key}: ${positionCSS[key]}`;
-    }).join(';')}; width: ${this.width}; height: ${this.height}; background: white; font-size: 14px; font-weight: 500; }`;
+    }).join(';')}; width: ${this.width}; height: ${this.height}; background: white; font-size: 14px; border: 1px solid #e0e0e0; border-bottom: 3px solid #9999ff; padding: 5px 10px; }`;
   }
 
   initContent() {

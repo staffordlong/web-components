@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Cookie Alert Web Component</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,500" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500" />
     <style>
       body {
         font-family: 'Roboto', sans-serif;
         font-weight: 300;
-        background: white;
+        background: #d9d9aa;
       }
-      h1 {
+      h1,strong {
         font-weight: 500;
       }
       .container {
@@ -24,23 +24,34 @@
     <div class="container">
       <h1>Page Title</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <cookie-alert>
+        <p>
+          <strong>[Static (default) position]</strong> This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+        </p>
+      </cookie-alert>
     </div>
 
-    <cookie-alert position="fixed-top">
+    <cookie-alert position="fixed" top="0" left="0" right="0">
       <p style="text-align: center">
-        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+        <strong>[Fixed to top]</strong> This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
       </p>
     </cookie-alert>
 
-    <cookie-alert position="fixed-bottom" height="200px">
-      <p>
-        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+    <cookie-alert position="fixed-bottom" left="0" right="0" bottom="0" height="200px">
+      <p style="text-align: center">
+        <strong>[Fixed to bottom]</strong> This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
       </p>
     </cookie-alert>
 
-    <cookie-alert position="fixed-coords" top="100px" right="100px" width="200px" height="400px">
+    <cookie-alert position="absolute" top="100px" right="100px" width="200px" height="400px">
       <p>
-        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+        <strong>[Absolute position]</strong> This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+      </p>
+    </cookie-alert>
+
+    <cookie-alert position="fixed" left="150px" bottom="20px" width="200px" height="400px">
+      <p>
+        <strong>[Fixed position]</strong> This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
       </p>
     </cookie-alert>
 
