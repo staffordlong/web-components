@@ -4,7 +4,8 @@ A collection / testing ground for Web Components which may or may not be safe/te
 
 1. [social-media-icons](/staffordlong/web-components/tree/master/social-media-icons) - A web component for easy insertion of social media icons for Twitter, Facebook, LinkedIn, Instagram, Pinterest and YouTube.
 2. [cookie-alert](/staffordlong/web-components/tree/master/cookie-alert) - A web component for easy insertion of cookie alerts - uses a slot for customizable content.
-3. *More to come...*
+3. [button-nested-icon](/staffordlong/web-components/tree/master/button-nested-icon) - An example using nesting & slots to produce a more composite component.
+4. *More to come...*
 
 ## What are they / how do I use them?
 
