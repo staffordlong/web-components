@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cookie Alert Web Component</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,500" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        background: white;
+      }
+      h1 {
+        font-weight: 500;
+      }
+      .container {
+        width: 800px;
+        height: 100vh;
+        margin: 100px auto 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Page Title</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <cookie-alert position="fixed-top">
+      <p style="text-align: center">
+        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+      </p>
+    </cookie-alert>
+
+    <cookie-alert position="fixed-bottom" height="200px">
+      <p>
+        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+      </p>
+    </cookie-alert>
+
+    <cookie-alert position="fixed-coords" top="100px" right="100px" width="200px" height="400px">
+      <p>
+        This website uses cookies to enhance your experience. Read more about your <a href="#privacy-and-cookies" title="Privacy &amp; Cookies">privacy and cookies</a>.
+      </p>
+    </cookie-alert>
+
+    <script src="index.js"></script>
+  </body>
+</html>
